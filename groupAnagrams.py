@@ -7,9 +7,12 @@ class Solution:
 
         for s in strs:
             count =[0]*26
+            print(count)
             for ch in s:
                 count[ord(ch)-ord('a')] += 1
-            
+
+            print(count)
+
             hashm[tuple(count)].append(s)
 
 
@@ -25,6 +28,7 @@ def main():
         try:
             uInput = input('Enter strings separated by a comma: ')
             parts = [s.strip() for s in uInput.split(',')]
+            print(parts)
             
             if not (1 <= len(parts) <= 104):
                 print("Invalid input. Please enter between 1 and 10,000 strings.")
